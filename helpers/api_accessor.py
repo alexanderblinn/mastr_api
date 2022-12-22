@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 A simple class for accessing the API of the Marktstammdatenregister.
 
@@ -10,6 +11,7 @@ apiKey, which you can use to access the API.
 """
 
 import os
+from typing import Any
 
 from zeep import Client, Settings, Transport
 from zeep.cache import SqliteCache
@@ -19,10 +21,20 @@ from helpers.config_reader import ConfigReader
 
 
 class MarktstammdatenregisterAPI:
-    """Simple class to access the API of the Marktstammdatenregister."""
+    """A class for accessing the API of the Marktstammdatenregister."""
 
-    def __init__(self, market_type: str):
-        """Initialize the MarktstammdatenregisterAPI object."""
+    def __init__(self, market_type: str) -> None:
+        """Initialize the MarktstammdatenregisterAPI object.
+
+        Parameters
+        ----------
+        market_type : str
+            The type of market to retrieve data for.
+
+        Returns
+        -------
+        None
+        """
         # Read config data from file
         config_path = os.path.join('helpers', 'config.json')
         config = ConfigReader(config_path).read_config()
@@ -42,8 +54,23 @@ class MarktstammdatenregisterAPI:
         self.client_bind = self.client.bind(
             'Marktstammdatenregister', self.market_type)
 
-    def get(self, method_name: str, **kwargs):
-        """Retrieve data from the Marktstammdatenregister API."""
+    def get(self, method_name: str, **kwargs: dict[str, Any]
+            ) -> dict[str, Any] | list[dict[str, Any]]:
+        """Retrieve data from the Marktstammdatenregister API.
+
+        Parameters
+        ----------
+        method_name : str
+            The name of the API method to call.
+        **kwargs : dict[str, Any]
+            Additional keyword arguments to pass to the API method.
+
+        Returns
+        -------
+        dict[str, Any] | list[dict[str, Any]]
+            The data returned by the API method, serialized as a dictionary
+            or list of dictionaries.
+        """
         # Get the specified method from the client binding
         method = getattr(self.client_bind, method_name)
         # Call the method and pass the required arguments
