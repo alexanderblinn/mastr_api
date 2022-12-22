@@ -35,7 +35,7 @@ class MarktstammdatenregisterAPI:
         -------
         None
         """
-        # Read config data from file
+        # Read config data from file.
         config_path = os.path.join('helpers', 'config.json')
         config = ConfigReader(config_path).read_config()
 
@@ -63,7 +63,8 @@ class MarktstammdatenregisterAPI:
         method_name : str
             The name of the API method to call.
         **kwargs : dict[str, Any]
-            Additional keyword arguments to pass to the API method.
+            Additional keyword arguments to pass to the API method. See the
+            documentation to learn more about the valid keyword arguments.
 
         Returns
         -------
