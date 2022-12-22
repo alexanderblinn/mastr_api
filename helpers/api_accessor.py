@@ -18,17 +18,18 @@ from zeep.cache import SqliteCache
 from zeep.helpers import serialize_object
 
 from helpers.config_reader import ConfigReader
+from helpers.enumeration import MarktTyp
 
 
 class MarktstammdatenregisterAPI:
     """A class for accessing the API of the Marktstammdatenregister."""
 
-    def __init__(self, market_type: str) -> None:
+    def __init__(self, market_type: MarktTyp) -> None:
         """Initialize the MarktstammdatenregisterAPI object.
 
         Parameters
         ----------
-        market_type : str
+        market_type : MarktTyp
             The type of market to retrieve data for.
 
         Returns
