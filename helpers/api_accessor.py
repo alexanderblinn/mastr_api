@@ -1,6 +1,14 @@
-"""..."""
+"""
+A simple class for accessing the API of the Marktstammdatenregister.
 
-import json
+To use this class, you must first register as a Webdienstnutzer/Marktakteur on
+the Marktstammdatenregister website:
+    https://test.marktstammdatenregister.de/MaStR
+
+Once you have registered, you will receive a marktakteurMastrNummer and an
+apiKey, which you can use to access the API.
+"""
+
 import os
 
 from zeep import Client, Settings, Transport
@@ -15,14 +23,11 @@ class MarktstammdatenregisterAPI:
 
     def __init__(self, market_type: str):
         """Initialize the MarktstammdatenregisterAPI object."""
-        # Use os.path.join to construct a file path by joining together a
-        # sequence of path components.
+        # Read config data from file
         config_path = os.path.join('helpers', 'config.json')
-
-        # Pass the constructed file path to the ConfigReader.
         config = ConfigReader(config_path).read_config()
 
-        # assign data in config to variables
+        # Assign data in config file to variables.
         self.marktakteurMastrNummer = config['MARKTAKTEUR_MASTR_NUMBER']
         self.api_key = config['API_KEY']
         self.market_type = market_type
@@ -33,28 +38,18 @@ class MarktstammdatenregisterAPI:
         transport = Transport(cache=SqliteCache())
         settings = Settings(strict=False, xml_huge_tree=True)
         self.client = Client(
-            wsdl=api_endpoint, transport=transport, settings=settings
-            )
+            wsdl=api_endpoint, transport=transport, settings=settings)
         self.client_bind = self.client.bind(
-            'Marktstammdatenregister', self.market_type
-            )
+            'Marktstammdatenregister', self.market_type)
 
     def get(self, method_name: str, **kwargs):
-        """
-        Retrieve data from the Marktstammdatenregister API.
-
-        Parameters
-        ----------
-        method_name : str
-            The name of the method to use for retrieving data for the unit/-s.
-
-        Returns
-        -------
-        object
-            The data for the unit/-s, in the format returned by the API.
-        """
+        """Retrieve data from the Marktstammdatenregister API."""
+        # Get the specified method from the client binding
         method = getattr(self.client_bind, method_name)
-        data = method(apiKey=self.api_key,
-                      marktakteurMastrNummer=self.marktakteurMastrNummer,
-                      **kwargs)
+        # Call the method and pass the required arguments
+        data = method(
+            apiKey=self.api_key,
+            marktakteurMastrNummer=self.marktakteurMastrNummer,
+            **kwargs)
+        # Serialize the data and return it
         return serialize_object(data)
