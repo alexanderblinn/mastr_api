@@ -73,12 +73,12 @@ class MarktstammdatenregisterAPI:
             The data returned by the API method, serialized as a dictionary
             or list of dictionaries.
         """
-        # Get the specified method from the client binding
+        # Get the specified method from the client binding.
         method = getattr(self.client_bind, method_name)
-        # Call the method and pass the required arguments
+        # Call the method and pass the required arguments.
         data = method(
             apiKey=self.api_key,
             marktakteurMastrNummer=self.marktakteurMastrNummer,
             **kwargs)
-        # Serialize the data and return it
+        # Serialize the data and return it.
         return serialize_object(data)
