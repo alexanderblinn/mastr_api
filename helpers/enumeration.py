@@ -1,35 +1,38 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Dec 22 16:53:19 2022
+Enumerations for the Marktstammdatenregister API.
 
-@author: s13c2d
+This file contains enumerations that can be used when interacting with the API
+of the Marktstammdatenregister. The enumerations provide a convenient way to
+specify certain parameters when making API requests, such as the type of
+market data to retrieve or the format of the response.
 """
 
 from enum import Enum
 
 
-class Einheiten(Enum):
-    # get unit
-    BIOMASSE = 'GetEinheitBiomasse'
-    GASERZEUGER = 'GetEinheitGasErzeuger'
-    GASSPEICHER = 'GetEinheitGasSpeicher'
-    GASVERBRAUCHER = 'GetEinheitGasVerbraucher'
-    GENEHMIGUNG = 'GetEinheitGenehmigung'
-    KERNKRAFT = 'GetEinheitKernkraft'
-    REST = 'GetEinheitGeoSolarthermieGrubenKlaerschlamm'
-    STROMSPEICHER = 'GetEinheitStromspeicher'
-    STROMVERBRAUCHER = 'GetEinheitStromverbraucher'
-    SOLAR = 'GetEinheitSolar'
-    VERBRENNUNG = 'GetEinheitVerbrennung'
-    WASSER = 'GetEinheitWasser'
-    WIND = 'GetEinheitWind'
-    # filter units by a search query
-    FILTER = 'GetGefilterteListeStromErzeuger'
+# class Einheiten(Enum):
+#     # get unit
+#     BIOMASSE = 'GetEinheitBiomasse'
+#     GASERZEUGER = 'GetEinheitGasErzeuger'
+#     GASSPEICHER = 'GetEinheitGasSpeicher'
+#     GASVERBRAUCHER = 'GetEinheitGasVerbraucher'
+#     GENEHMIGUNG = 'GetEinheitGenehmigung'
+#     KERNKRAFT = 'GetEinheitKernkraft'
+#     REST = 'GetEinheitGeoSolarthermieGrubenKlaerschlamm'
+#     STROMSPEICHER = 'GetEinheitStromspeicher'
+#     STROMVERBRAUCHER = 'GetEinheitStromverbraucher'
+#     SOLAR = 'GetEinheitSolar'
+#     VERBRENNUNG = 'GetEinheitVerbrennung'
+#     WASSER = 'GetEinheitWasser'
+#     WIND = 'GetEinheitWind'
+#     # filter units by a search query
+#     FILTER = 'GetGefilterteListeStromErzeuger'
 
 
 # Einheiten = {e.name: e.value for e in Einheiten}
 
-class MarketType(Enum):
+class MarktTyp(Enum):
     AKTEUR = 'Akteur'
     ANLAGE = 'Anlage'
     # ALLGEMEINE_FUNKTIONEN = 'AllgemeineFunktionen'
