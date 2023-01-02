@@ -19,7 +19,7 @@ README.md for the `mastr` repository.
 <br />
 <div align="center">
   <a href="https://github.com/alexanderblinn/mastr">
-    <img src="logo/logo.png" alt="Logo" width="100" height="100">
+    <img src="logo/logo.png" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center">MaStR</h3>
