@@ -3,6 +3,8 @@
 
 from typing import Any
 
+import pandas as pd
+
 from helpers.api_accessor import MarktstammdatenregisterAPI
 from helpers.enumeration import Energietraeger, Marktfunktion, MarktTyp
 
@@ -22,7 +24,8 @@ def get_power_units(**kwargs: dict[str, str]) -> dict[str, Any]:
         The data returned by the API method, serialized as a dictionary.
     """
     api = MarktstammdatenregisterAPI(MarktTyp.ANLAGE.value)
-    return api.get('GetGefilterteListeStromErzeuger', **kwargs)
+    data = api.get('GetGefilterteListeStromErzeuger', **kwargs)
+    return pd.DataFrame(data['Einheiten'])
 
 
 def get_market_players(**kwargs: dict[str, str]) -> dict[str, Any]:
@@ -66,15 +69,15 @@ def get_player_info(mastr_nummer: str, **kwargs: dict[str, str]
 if __name__ == '__main__':
     power_units = get_power_units(
         ort='Schiffweiler',
-        energietraeger=Energietraeger.WIND.value
+        energietraeger=Energietraeger.SOLAR.value
         )
 
-    market_akteurs = get_market_players(
-        ort='Trier',
-        marktfunktion=Marktfunktion.STROMNETZBETREIBER.value
-        )
+    # market_akteurs = get_market_players(
+    #     ort='Neunkirchen',
+    #     # marktfunktion=Marktfunktion.STROMNETZBETREIBER.value
+    #     )
 
-    player_info = get_player_info(mastr_nummer='SNB966813503780')
+    # player_info = get_player_info(mastr_nummer='SNB943841101959')
 
 # %%
 # import csv
