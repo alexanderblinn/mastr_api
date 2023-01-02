@@ -82,8 +82,8 @@ Once you have registered, you will receive a _marktakteurMastrNummer_ and an _ap
 
 ```json
 {
-  "MARKTAKTEUR_MASTR_NUMBER":"...",
-  "API_KEY":"..."
+  "MARKTAKTEUR_MASTR_NUMBER":"YOUR-marktakteurMastrNummer",
+  "API_KEY":"YOUR-apiKey"
 }
 ```
 
