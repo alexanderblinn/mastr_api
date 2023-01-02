@@ -76,6 +76,7 @@ The Marktstammdatenregister API Web Services provides HTTP interfaces for progra
 
 To use this class, you must first register as a Webdienstnutzer/Marktakteur on the Marktstammdatenregister website:
     https://test.marktstammdatenregister.de/MaStR
+
 Once you have registered, you will receive a marktakteurMastrNummer and an apiKey, which you can use to access the API.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
