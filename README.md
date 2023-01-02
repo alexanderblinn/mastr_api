@@ -127,8 +127,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Alexander Blinn - alexander.blinn@outlook.de
-
 Project Link: [https://github.com/alexanderblinn/mastr](https://github.com/alexanderblinn/mastr)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
