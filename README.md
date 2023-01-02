@@ -145,4 +145,4 @@ Project Link: [https://github.com/alexanderblinn/mastr](https://github.com/alexa
 [issues-shield]: https://img.shields.io/github/issues/alexanderblinn/mastr.svg?style=for-the-badge
 [issues-url]: https://github.com/alexanderblinn/mastr/issues
 [license-shield]: https://img.shields.io/github/license/alexanderblinn/mastr.svg?style=for-the-badge
-[license-url]: https://github.com/alexanderblinn/mastr/blob/master/LICENSE.txt
+[license-url]: https://github.com/alexanderblinn/mastr/blob/main/LICENSE
