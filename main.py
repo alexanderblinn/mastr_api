@@ -72,23 +72,9 @@ if __name__ == '__main__':
         energietraeger=Energietraeger.SOLAR.value
         )
 
-    # market_akteurs = get_market_players(
-    #     ort='Neunkirchen',
-    #     # marktfunktion=Marktfunktion.STROMNETZBETREIBER.value
-    #     )
+    market_akteurs = get_market_players(
+        ort='Neunkirchen',
+        marktfunktion=Marktfunktion.STROMNETZBETREIBER.value
+        )
 
-    # player_info = get_player_info(mastr_nummer='SNB943841101959')
-
-# %%
-# import csv
-
-# keys, values = [], []
-
-# for key, value in power_units.items():
-#     keys.append(key)
-#     values.append(value)       
-
-# with open("frequencies.csv", "w") as outfile:
-#     csvwriter = csv.writer(outfile)
-#     csvwriter.writerow(keys)
-#     csvwriter.writerow(values)
+    player_info = get_player_info(mastr_nummer='SNB943841101959')
