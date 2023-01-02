@@ -62,7 +62,7 @@ README.md for the `mastr` repository.
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-The Marktstammdatenregister (MaStR) is an official register of all plants and devices in the German energy system and is maintained by the Federal Network Agency (BNetzA).
+The Marktstammdatenregister (MaStR) is an official register of all installed plants and devices in the German energy system and is maintained by the Federal Network Agency (BNetzA).
 The Marktstammdatenregister API Web Services provides HTTP interfaces for programmatic data exchange between the Market Master Data Register and clients.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
