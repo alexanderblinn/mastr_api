@@ -27,7 +27,7 @@ README.md for the `mastr` repository.
   <p align="center">
     Access the API of the Marktstammdatenregister.
     <br />
-    <a href="https://github.com/alexanderblinn/mastr/readme"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/alexanderblinn/mastr/blob/main/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/alexanderblinn/mastr/blob/main/README.md">View Demo</a>
