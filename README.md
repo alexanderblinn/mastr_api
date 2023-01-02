@@ -30,7 +30,7 @@ README.md for the `mastr` repository.
     <a href="https://github.com/alexanderblinn/mastr/readme"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/alexanderblinn/mastr/readme">View Demo</a>
+    <a href="https://github.com/alexanderblinn/mastr/blob/main/README.md">View Demo</a>
     ·
     <a href="https://github.com/alexanderblinn/mastr/issues">Report Bug</a>
     ·
