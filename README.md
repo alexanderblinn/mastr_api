@@ -46,15 +46,9 @@ README.md for the `mastr` repository.
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -68,7 +62,8 @@ README.md for the `mastr` repository.
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-...
+The Marktstammdatenregister (MaStR) is an official register of all plants and devices in the German energy system and is maintained by the Federal Network Agency (BNetzA).
+The Marktstammdatenregister API Web Services provides HTTP interfaces for programmatic data exchange between the Market Master Data Register and clients.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -77,12 +72,6 @@ README.md for the `mastr` repository.
 
 <!-- GETTING STARTED -->
 ## Getting Started
-...
-
-
-
-
-### Installation
 
 To use this class, you must first register as a Webdienstnutzer/Marktakteur on the Marktstammdatenregister website:
     https://test.marktstammdatenregister.de/MaStR
