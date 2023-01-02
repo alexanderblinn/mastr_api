@@ -78,7 +78,7 @@ The Marktstammdatenregister API Web Services provides HTTP interfaces for progra
 To use this class, you must first register as a Webdienstnutzer/Marktakteur on the Marktstammdatenregister website:
     https://test.marktstammdatenregister.de/MaStR
 
-Once you have registered, you will receive a _marktakteurMastrNummer_ and an _apiKey_, which you can use to access the API. To do this, you need to create a new `config.json` file in `./helpers` and save both strings, as shown below. 
+Once you have registered, you will receive a _marktakteurMastrNummer_ and an _apiKey_, which you can use to access the API. To do this, you need to create a new `config.json` file in `./helpers/` and save both strings, as shown below. 
 
 ```json
 {
@@ -98,7 +98,7 @@ Once you have registered, you will receive a _marktakteurMastrNummer_ and an _ap
 
 See `main.py` to learn how to use the MarktstammdatenregisterAPI class.
 
-_For more information, check the official [website](https://www.marktstammdatenregister.de/MaStRHilfe/subpages/webdienst.html)._
+_For more information, check the official [website](https://www.marktstammdatenregister.de/MaStRHilfe/subpages/webdienst.html) and the official documentation, which is deposited in the folder `./docs/`._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -138,6 +138,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Project Link: [https://github.com/alexanderblinn/mastr](https://github.com/alexanderblinn/mastr)
+
+E-Mail: [alexander.blinn@outlook.de](alexander.blinn@outlook.de)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
