@@ -91,7 +91,7 @@ Once you have registered, you will receive a marktakteurMastrNummer and an apiKe
 
 See `main.py` to learn how to use the MarktstammdatenregisterAPI class.
 
-_For more examples, check the official [website](https://www.marktstammdatenregister.de/MaStRHilfe/subpages/webdienst.html)_
+_For more examples, check the official [website](https://www.marktstammdatenregister.de/MaStRHilfe/subpages/webdienst.html)._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
