@@ -10,7 +10,7 @@ from src.enumeration import (
     AnlagenBetriebsStatus,
     BrennstoffLage,
     BundeslaenderEinheiten,
-    EEG_Einheiten,
+    EEGEinheiten,
     Einheiten,
     Energietraeger,
     Marktfunktion,
@@ -24,14 +24,14 @@ from src.enumeration import (
 
 # %% get a specific unit
 
-def get_eeg_unit(unit_type: EEG_Einheiten, unit_number: str) -> dict[str, Any]:
+def get_eeg_unit(unit_type: EEGEinheiten, unit_number: str) -> dict[str, Any]:
     """
     Get data of power units from the Marktstammdatenregister API.
 
     Parameters
     ----------
-    unit_type: EEG_Einheiten
-        Value of the enum `EEG_Einheiten`.
+    unit_type: EEGEinheiten
+        Value of the enum `EEGEinheiten`.
     unit_number: str
        The MaStR number of the desired EEG unit.
 
