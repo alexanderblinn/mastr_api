@@ -152,4 +152,4 @@ cython_debug/
 #.idea/
 
 # sensitive data
-helpers/config.json
+src/config.json
