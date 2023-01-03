@@ -98,7 +98,7 @@ Once you have registered, you will receive a _marktakteurMastrNummer_ and an _ap
 
 See `main.py` to learn how to use the MarktstammdatenregisterAPI class.
 
-_For more information, check the official [website](https://www.marktstammdatenregister.de/MaStRHilfe/subpages/webdienst.html) and the official documentation, which is deposited in the folder `./docs/`._
+_For more information, check the official [website](https://www.marktstammdatenregister.de/MaStRHilfe/subpages/webdienst.html) and the official [documentation](https://www.marktstammdatenregister.de/MaStRHilfe/files/webdienst/Funktionen_MaStR_Webdienste_V1.2.87.html)._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
