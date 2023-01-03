@@ -28,7 +28,7 @@ class Einheiten(Enum):
     WIND = 'GetEinheitWind'
 
 
-class EEG_Einheiten(Enum):
+class EEGEinheiten(Enum):
     BIOMASSE = 'GetAnlageEegBiomasse'
     GEO_ST_GKS = 'GetAnlageEegGeoSolarthermieGrubenKlaerschlamm'
     SOLAR = 'GetAnlageEegSolar'
