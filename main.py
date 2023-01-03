@@ -5,7 +5,7 @@ import pandas as pd
 
 from src.enumeration import (
     BundeslaenderEinheiten,
-    EEG_Einheiten,
+    EEGEinheiten,
     Einheiten,
     Marktfunktion
     )
@@ -20,7 +20,7 @@ from helpers.functions import (
 
 if __name__ == '__main__':
     # Usage example to get data of a specific EEG unit.
-    eeg_unit = get_eeg_unit(EEG_Einheiten.WASSER.value, 'EEG961283324996')
+    eeg_unit = get_eeg_unit(EEGEinheiten.WASSER.value, 'EEG961283324996')
 
     # Usage example to get data of a specific power unit.
     unit = get_unit(Einheiten.KERNKRAFT.value, 'SEE943690268513')
