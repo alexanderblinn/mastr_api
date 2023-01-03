@@ -64,7 +64,7 @@ def get_unit(unit_type: Einheiten, unit_number: str) -> dict[str, Any]:
     return api.get(unit_type, einheitMastrNummer=unit_number)
 
 
-def get_player_info(mastr_nummer: str, **kwargs: dict[str, str]
+def get_player(mastr_nummer: str, **kwargs: dict[str, str]
                     ) -> dict[str, Any]:
     """
     Get information about a market player from the Marktstammdatenregister API.
@@ -87,7 +87,7 @@ def get_player_info(mastr_nummer: str, **kwargs: dict[str, str]
 
 # %% get filtered units
 
-def get_power_units(
+def get_units(
         startAb: int | None = None,
         datumAb: datetime | None = None,
         limit: int | None = None,
@@ -162,7 +162,7 @@ def get_power_units(
         )
 
 
-def get_market_players(
+def get_players(
         startAb: int | None = None,
         datumAb: datetime | None = None,
         limit: int | None = None,
