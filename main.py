@@ -1,80 +1,41 @@
 # -*- coding: utf-8 -*-
 """A script to demonstrate how to use the MarktstammdatenregisterAPI class."""
 
-from typing import Any
-
 import pandas as pd
 
-from helpers.api_accessor import MarktstammdatenregisterAPI
-from helpers.enumeration import Energietraeger, Marktfunktion, MarktTyp
-
-
-def get_power_units(**kwargs: dict[str, str]) -> dict[str, Any]:
-    """
-    Get data of power units from the Marktstammdatenregister API.
-
-    Parameters
-    ----------
-    **kwargs : dict[str, str]
-        Additional keyword arguments to pass to the API method.
-
-    Returns
-    -------
-    dict[str, Any]
-        The data returned by the API method, serialized as a dictionary.
-    """
-    api = MarktstammdatenregisterAPI(MarktTyp.ANLAGE.value)
-    data = api.get('GetGefilterteListeStromErzeuger', **kwargs)
-    return pd.DataFrame(data['Einheiten'])
-
-
-def get_market_players(**kwargs: dict[str, str]) -> dict[str, Any]:
-    """Get data of market players from the Marktstammdatenregister API.
-
-    Parameters
-    ----------
-    **kwargs : dict[str, str]
-        Additional keyword arguments to pass to the API method.
-
-    Returns
-    -------
-    dict[str, Any]
-        The data returned by the API method, serialized as a dictionary.
-    """
-    api = MarktstammdatenregisterAPI(MarktTyp.AKTEUR.value)
-    return api.get('GetGefilterteListeMarktakteure', **kwargs)
-
-
-def get_player_info(mastr_nummer: str, **kwargs: dict[str, str]
-                    ) -> dict[str, Any]:
-    """
-    Get information about a market player from the Marktstammdatenregister API.
-
-    Parameters
-    ----------
-    mastr_nummer : str
-        The MaStR number of the market player.
-    **kwargs : dict[str, str]
-        Additional keyword arguments to pass to the API method.
-
-    Returns
-    -------
-    dict[str, Any]
-        The data returned by the API method, serialized as a dictionary.
-    """
-    api = MarktstammdatenregisterAPI(MarktTyp.AKTEUR.value)
-    return api.get('GetMarktakteur', mastrNummer=mastr_nummer, **kwargs)
+from src.enumeration import (
+    BundeslaenderEinheiten,
+    EEG_Einheiten,
+    Einheiten,
+    Marktfunktion
+    )
+from helpers.functions import (
+    get_eeg_unit,
+    get_unit,
+    get_player_info,
+    get_power_units,
+    get_market_players
+    )
 
 
 if __name__ == '__main__':
-    power_units = get_power_units(
-        ort='Schiffweiler',
-        energietraeger=Energietraeger.SOLAR.value
-        )
+    # Usage example to get data of a specific EEG unit.
+    eeg_unit = get_eeg_unit(EEG_Einheiten.WASSER.value, 'EEG961283324996')
 
-    market_akteurs = get_market_players(
-        ort='Neunkirchen',
+    # Usage example to get data of a specific power unit.
+    unit = get_unit(Einheiten.KERNKRAFT.value, 'SEE943690268513')
+    unit = get_unit(Einheiten.WASSER.value, 'SEE904976795352')
+
+    # Usage example to get data of a specific power unit.
+    player_info = get_player_info(mastr_nummer='SNB943841101959')
+
+    # Usage example to get data of power units that match a filter.
+    power_units = get_power_units(ort='Birkenfeld')
+    power_units = pd.DataFrame(power_units['Einheiten'])
+
+    # Usage example to get data of market players that match a filter.
+    market_players = get_market_players(
+        bundesland=BundeslaenderEinheiten.SAARLAND.value,
         marktfunktion=Marktfunktion.STROMNETZBETREIBER.value
         )
-
-    player_info = get_player_info(mastr_nummer='SNB943841101959')
+    market_players = pd.DataFrame(market_players['Marktakteure'])
