@@ -78,7 +78,7 @@ The Marktstammdatenregister API Web Services provides HTTP interfaces for progra
 To use this class, you must first register as a Webdienstnutzer/Marktakteur on the Marktstammdatenregister website:
     https://test.marktstammdatenregister.de/MaStR
 
-Once you have registered, you will receive a _marktakteurMastrNummer_ and an _apiKey_, which you can use to access the API. To do this, you need to create a new `config.json` file in `./src/` and save both strings, as shown below. 
+Once you have registered, you will receive a _marktakteurMastrNummer_ and an _apiKey_, which you can use to access the API. To do this, you need to create a new `config.json` file in `./src/` and save both strings as shown below. 
 
 ```json
 {
