@@ -1,5 +1,5 @@
 <!---
-README.md for the `mastr` repository.
+README.md for the `mastr_api` repository.
 -->
 
 
