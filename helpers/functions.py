@@ -65,7 +65,7 @@ def get_unit(unit_type: Einheiten, unit_number: str) -> dict[str, Any]:
 
 
 def get_player(mastr_nummer: str, **kwargs: dict[str, str]
-                    ) -> dict[str, Any]:
+               ) -> dict[str, Any]:
     """
     Get information about a market player from the Marktstammdatenregister API.
 
